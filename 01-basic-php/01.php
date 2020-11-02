@@ -2,7 +2,7 @@
 require __DIR__ . "/vendor/autoload.php"; 
 
 //Add up the numbers:
-
+//
 
 $number1 = 10;
 $number2 = 20;

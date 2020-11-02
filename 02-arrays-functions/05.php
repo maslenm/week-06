@@ -10,7 +10,7 @@ Create a function, divide, that takes two numbers as arguments. The function sho
 
 function divide ($a, $b) {
     return $a / $b;
-}
+};
 
 dump(divide(4, 2)); // 2
 dump(divide(20, 2)); // 10

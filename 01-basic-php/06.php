@@ -22,7 +22,7 @@ Example output:
 1275
  */
 
-
+$total = 0;
 
 for ($i = 1; $i <= 50; $i += 1) {
     $total += $i;

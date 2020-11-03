@@ -8,7 +8,7 @@ Update sameName to return true if the associative arrays have the same name prop
 
 function sameName ($person1, $person2) {
     // … your code here
-    return $person1["name"] === $person2["name"] ? true : false;
+    return $person1["name"] === $person2["name"];
 };
 
 $a = [ "name" => "Alice", "age" => 52 ];

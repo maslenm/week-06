@@ -11,15 +11,17 @@ Try it using collect() (you'll need the illuminate/support package)
 
 // … your function here
 
-
+//create function
 function squares ($values) {
-    
+//create variable to store array
+$squares = [];
+    //iterate over each of the values as 'value'
     foreach ($values as $value) { 
-
+        //set the squares variable to be the value squared
         $squares[] = $value * $value;
         
     };
-
+    //return value 
     return $squares;
 };
 

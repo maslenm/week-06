@@ -43,23 +43,17 @@ class Address
 
     public function fullAddress() 
     {
-        return ("{$this->street}" . ", " . "{$this->postcode}" . ", " . "{$this->town}");
-        
+        $parts = array_filter([
+            $this->street,
+            $this->postcode,
+            $this->town,
+        ]);
+        return implode(", ", $parts);
     }
-
 }; 
 
 $address = new Address("1 Made Up Street", "BS4 8TR", "Bristol");
 
-
-//better answer to fullAddress:
-/* 
-public function fullAddress()
-    {
-        $parts = [$this->street, $this->postcode, $this->town];
-        return implode(", ", $parts);
-    }
- */
 
 // logs the full address neatly
 dump($address->fullAddress()); // "1 Made Up Street, Bristol, BS4 8TR"

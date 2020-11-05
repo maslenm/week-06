@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 require __DIR__ . "/vendor/autoload.php";
 
 /* 
@@ -13,17 +15,17 @@ class LightSwitch
 {
     private $on = false;
 
-    public function isOn()
+    public function isOn() : bool
     {
         return $this->on;
     }
 
-    public function turnOn()
+    public function turnOn() : void
     {
         $this->on = true;
     }
 
-    public function turnOff()
+    public function turnOff() : void
     {
         $this->on = false;
     }

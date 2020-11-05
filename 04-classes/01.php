@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 require __DIR__ . "/vendor/autoload.php";
 
@@ -8,30 +9,30 @@ require __DIR__ . "/vendor/autoload.php";
 
 // ... your class here
 
-// create three phones
 
 class Phone
 {
     private $make;
     private $model;
     
-    public function __construct($make, $model)
+    public function __construct(string $make, string $model)
     {
         $this->make = $make;
         $this->model = $model;
     }
-        
-    public function model()
+    
+    public function model() : string
     {
-        return "{$this->model}";
+        return $this->model;
     }
-
-    public function make()
+    
+    public function make() : string
     {
-        return "{$this->make}";
+        return $this->make;
     }
 }
 
+// create three phones
 $iPhone = new Phone("Apple", "iPhone XS");
 $galaxy = new Phone("Samsung", "Galaxy");
 $retro = new Phone("Nokia", "3210");

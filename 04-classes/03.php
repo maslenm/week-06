@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 require __DIR__ . "/vendor/autoload.php";
 
 
@@ -10,35 +12,33 @@ class Car
     private $numberplate;
     private $mileage = 0;
 
-    public function __construct($make, $numberplate)
+    public function __construct(string $make, string $numberplate)
     {
         $this->make = $make;
         $this->numberplate = $numberplate;
     }
 
-    public function getNumberplate()
+    public function getNumberplate() : string
     {
         return $this->numberplate;
     }
 
-    public function getMake()
+    public function getMake() : string
     {
         return $this->make;
     }
 
-    public function getMileage()
+    public function getMileage() : int
     {
         return $this->mileage;
     }
 
-    public function addJourney($miles)
+    public function addJourney(int $miles)
     {
         $this->mileage += $miles;
     }
 
-}
-
-// ... your class here
+};
 
 // you pass in a make and number plate
 $car = new Car("Ford", "XY11 4TY");

@@ -18,7 +18,7 @@ class Book
     private $pagesRead = 1;
 
     //construct method with 2 parameters for new object instances
-    public function construct__(string  $title, int $numberOfPages)
+    public function __construct(string  $title, int $numberOfPages)
     //store values passed in as properties
     {
         $this->title = $title;
